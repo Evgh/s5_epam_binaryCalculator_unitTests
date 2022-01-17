@@ -43,9 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BynaryCalculator.cs" />
+    <Compile Include="BinaryCalculatorExtensions.cs" />
     <Compile Include="Exceptions\NegativeShiftValueException.cs" />
-    <Compile Include="Exceptions\StringIsNotBynaryException.cs" />
+    <Compile Include="Exceptions\StringIsNotBinaryException.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

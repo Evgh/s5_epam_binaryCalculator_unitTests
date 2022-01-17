@@ -4,13 +4,15 @@ using s5_epam_binaryCalculator_unitTests.Exceptions;
 
 namespace s5_epam_binaryCalculator_unitTests
 {
-    public static class BinaryCalculator
+    public static class BinaryCalculatorExtensions
     {
-        public static int And(this int number, int parameter) => number & parameter;
-        public static int Or(this int number, int parameter) => number | parameter;
-        public static int Xor(this int number, int parameter) => number ^ parameter;
+        #region Public Methods
 
-        public static int LeftShift(this int number, int shift)
+        public static int BinaryAnd(this int number, int parameter) => number & parameter;
+        public static int BinaryOr(this int number, int parameter) => number | parameter;
+        public static int BinaryXor(this int number, int parameter) => number ^ parameter;
+
+        public static int BinaryLeftShift(this int number, int shift)
         {
             if (shift < 0)
                 throw new NegativeShiftValueException("Shift value shouldn't be negative");
@@ -18,7 +20,7 @@ namespace s5_epam_binaryCalculator_unitTests
             return number << shift;
         }
 
-        public static int RightShift(this int number, int shift)
+        public static int BinaryRightShift(this int number, int shift)
         {
             if (shift < 0)
                 throw new NegativeShiftValueException("Shift value shouldn't be negative");
@@ -26,7 +28,7 @@ namespace s5_epam_binaryCalculator_unitTests
             return number >> shift;
         }
 
-        public static string GetBynaryView(this int number)
+        public static string GetBinaryView(this int number)
         {
             var builder = new StringBuilder();
 
@@ -43,22 +45,28 @@ namespace s5_epam_binaryCalculator_unitTests
             return builder.ToString().Trim();
         }
 
-        public static int GetNumberFromBynaryView(this string bynaryView)
+        public static int GetNumberFromBinaryView(this string binaryView)
         {
-            string bynaryStringWithoutWhitespaces = bynaryView.RemoveAllWhitespaces();
+            string binaryStringWithoutWhitespaces = binaryView.RemoveAllWhitespaces();
             int numberView = 0;
 
-            for (int i = bynaryStringWithoutWhitespaces.Length - 1; i >= 0; i--)
+            for (int i = binaryStringWithoutWhitespaces.Length - 1; i >= 0; i--)
             {
-                if (bynaryStringWithoutWhitespaces[i] == '1')
+                if (binaryStringWithoutWhitespaces[i] == '1')
                     numberView += (int)Math.Pow(2, i);
 
-                else if (bynaryStringWithoutWhitespaces[i] != '0')
-                    throw new StringIsNotBynaryException("String should consist of 0 and 1 only");
+                else if (binaryStringWithoutWhitespaces[i] != '0')
+                    throw new StringIsNotBinaryException("String should consist of 0 and 1 only");
             }
             return numberView;
         }
 
+        #endregion
+
+        #region Private Methods
+
         private static string RemoveAllWhitespaces(this string value) => string.Join("", value.Split(' '));
+
+        #endregion
     }
 }

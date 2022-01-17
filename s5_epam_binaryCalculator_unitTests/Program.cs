@@ -6,9 +6,14 @@ namespace s5_epam_binaryCalculator_unitTests
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("10001".GetNumberFromBynaryView().Xor("11".GetNumberFromBynaryView()).GetBynaryView());
-            Console.WriteLine(9.RightShift(2));
-            Console.WriteLine(9.LeftShift(2));
+            DoSomeBinaryExtensionsFunctionality();
+        }
+
+        private static void DoSomeBinaryExtensionsFunctionality()
+        {
+            Console.WriteLine("10001".GetNumberFromBinaryView().BinaryXor("11".GetNumberFromBinaryView()).GetBinaryView());
+            Console.WriteLine(9.BinaryRightShift(2));
+            Console.WriteLine(9.BinaryLeftShift(2));
         }
     }
 }
