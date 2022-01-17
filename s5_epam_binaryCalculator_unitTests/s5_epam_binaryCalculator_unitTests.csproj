@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BinaryCalculatorExtensions.cs" />
+    <Compile Include="BinaryPrinterExtensions.cs" />
     <Compile Include="Exceptions\NegativeShiftValueException.cs" />
     <Compile Include="Exceptions\StringIsNotBinaryException.cs" />
     <Compile Include="Program.cs" />
