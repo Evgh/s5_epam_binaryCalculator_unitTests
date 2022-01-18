@@ -1,4 +1,4 @@
-# Project created to showcase my skills with NUnit
+# Project was created to showcase my skills with NUnit
 _I created the functionality for performing binary operations and tests that test it._
 
 ## What does s5_epam_binaryCalculator_unitTests contain  
