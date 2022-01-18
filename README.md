@@ -29,9 +29,9 @@ The project contains a single class BinaryCalculatorExtensionsTests that describ
 02| Test BinaryOr Method | We have 2 valid numbers | Execute BinaryOr() for our numbers | Get valid answer |
 03| Test BinaryXor Method | We have 2 valid numbers | Execute BinaryXor() for our numbers | Get valid answer |
 04| Positive Test BinaryRightShift Method | We have a valid number and a valid shift value | Execute BinaryRightShift() with a number per shift value | Get valid answer |
-05| Negative Test BinaryRightShift Method | We have a valid number and a invalid shift value | Execute BinaryRightShift() with a number per invalid shift value | Throws an exception |
+05| Negative Test BinaryRightShift Method | We have a valid number and an invalid shift value | Execute BinaryRightShift() with a number per invalid shift value | Throws an exception |
 06| Positive Test BinaryLeftShift Method | We have a valid number and a valid shift value | Execute BinaryLeftShift() with a number per shift value | Get valid answer |
-07| Negative Test BinaryLeftShift Method | We have a valid number and a invalid shift value | Execute BinaryLeftShift() with a number per invalid shift value | Throws an exception |
+07| Negative Test BinaryLeftShift Method | We have a valid number and an invalid shift value | Execute BinaryLeftShift() with a number per invalid shift value | Throws an exception |
 08| Test GetBinaryView Method | We have a valid number | Execute GetBinaryView() with a number | Get valid answer |
 09| Positive Test GetNumberFromBinaryView Method | We have a valid string that consists of '0' and '1' symbols only | Execute GetNumberFromBinaryView() with a string | Get valid answer |
 10| Negative Test GetNumberFromBinaryView Method | We have an invalid string that contains characters other than '0' and '1' | Execute GetNumberFromBinaryView() with a string | Throws an exception |
