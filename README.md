@@ -1,13 +1,13 @@
-# Project was created to showcase my skills with NUnit
-_I created the functionality for performing binary operations and tests that test it._
+# Project was created to demonstrate my skills with NUnit
+_I created a binary operations functionality and tests for it._
 
-## What does s5_epam_binaryCalculator_unitTests contain  
-### It describes the functionality that is actually planned to be tested. 
+## What s5_epam_binaryCalculator_unitTests project is  
+### It describes the functionality that is planned to be tested 
 - Main binary operations 
-- Displaying a number as a binary string
-- Getting a number from a string consisting of '0' and '1'. (For example "10" => 2)
+- Displaying a number in a binary representation
+- Getting a number from a string consisting only of '0' and '1' symbols (For example "110" => 6)
 
-I implemented it in the form of extension methods. Binary operations extensions are described in class BinaryCalculatorExtensions. Methods for working with binary strings are described in the class BinaryPrinterExtensions.
+I implemented it in the form of extension methods. Extensions for binary operations are described in the class BinaryCalculatorExtensions. Methods for working with binary representation are described in the class BinaryPrinterExtensions.
 
 Sample of using my logic:
 ```
@@ -17,9 +17,9 @@ Console.WriteLine("10001".GetNumberFromBinaryView());
 ```
 Output will be 6, 10, 17.
 
-The logic is extremely simple, but everything is done here for the sake of tests, and not for the sake of complex logic.
+The logic is extremely simple, but everything here is done for the sake of tests, and not for the sake of complex logic.
 
-## What does CalculatorTests contain  
+## What CalculatorTests project is
 ### Tests made using the Nunit framework.
 The project contains a single class BinaryCalculatorExtensionsTests that describes the tests. They are made according to the following testcases.
 
